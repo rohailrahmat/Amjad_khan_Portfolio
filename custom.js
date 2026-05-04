@@ -1,153 +1,110 @@
-
-
-// ---- Navbar scroll ----
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) navbar.classList.add('scrolled');
-  else navbar.classList.remove('scrolled');
-});
-
-// ---- Mobile menu ----
-const menuBtn = document.getElementById('menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
-menuBtn.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-});
-document.querySelectorAll('.mobile-link, #mobile-menu a').forEach(link => {
-  link.addEventListener('click', () => mobileMenu.classList.remove('open'));
-});
-
-// ---- Reveal on scroll ----
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+// Custom cursor
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursorRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cursor.style.transform = `translate(${mx - 5}px,${my - 5}px)`;
+    });
+    function animateRing() {
+      rx += (mx - rx) * 0.12;
+      ry += (my - ry) * 0.12;
+      ring.style.transform = `translate(${rx - 19}px,${ry - 19}px)`;
+      requestAnimationFrame(animateRing);
     }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-reveals.forEach(el => observer.observe(el));
+    animateRing();
 
-// ---- Animated counters ----
-function animateCounter(el) {
-  const target = parseInt(el.dataset.counter);
-  const prefix = el.dataset.prefix || '';
-  const suffix = el.dataset.suffix || '';
-  const duration = 2000;
-  const start = performance.now();
-  const update = (time) => {
-    const elapsed = time - start;
-    const progress = Math.min(elapsed / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    const current = Math.floor(eased * target);
-    el.textContent = prefix + current + suffix;
-    if (progress < 1) requestAnimationFrame(update);
-    else el.textContent = prefix + target + suffix;
-  };
-  requestAnimationFrame(update);
-}
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+          revealObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => revealObs.observe(el));
 
-const counterObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting && !entry.target.dataset.animated) {
-      entry.target.dataset.animated = 'true';
-      animateCounter(entry.target);
-    }
-  });
-}, { threshold: 0.5 });
-document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el));
+    // Skill bar animation
+    const fills = document.querySelectorAll('.skill-fill');
+    const skillObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('animated'); skillObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.3 });
+    fills.forEach(el => skillObs.observe(el));
 
-// ---- Skill bars ----
-const skillObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.querySelectorAll('.skill-fill').forEach(bar => {
-        bar.style.width = bar.dataset.width + '%';
+    // 3D Tilt Effect for Profile
+    const profileTilt = document.getElementById('profileTilt');
+    if (profileTilt) {
+      document.addEventListener('mousemove', (e) => {
+        const { clientX, clientY } = e;
+        const { innerWidth, innerHeight } = window;
+
+        // Calculate rotation based on mouse position
+        const xRot = ((clientY / innerHeight) - 0.5) * 20; // max 10deg
+        const yRot = ((clientX / innerWidth) - 0.5) * -20; // max -10deg
+
+        profileTilt.style.transform = `rotateX(${xRot}deg) rotateY(${yRot}deg)`;
+      });
+
+      profileTilt.addEventListener('mouseleave', () => {
+        profileTilt.style.transform = `rotateX(0deg) rotateY(0deg)`;
       });
     }
-  });
-}, { threshold: 0.3 });
-document.querySelectorAll('#skills').forEach(el => skillObserver.observe(el));
 
-// ---- Testimonial slider ----
-const slides = document.querySelectorAll('.testimonial-slide');
-const dotsContainer = document.getElementById('dots');
-let currentSlide = 0;
-let autoSlide;
+    // Hero Parallax Blobs
+    const blobs = document.querySelectorAll('.hero-blob');
+    window.addEventListener('mousemove', (e) => {
+      const { clientX, clientY } = e;
+      const { innerWidth, innerHeight } = window;
 
-slides.forEach((_, i) => {
-  const dot = document.createElement('button');
-  dot.className = 'w-2 h-2 rounded-full transition-all duration-300';
-  dot.style.background = i === 0 ? 'linear-gradient(135deg, #a855f7, #ec4899)' : 'rgba(255,255,255,0.2)';
-  dot.addEventListener('click', () => goToSlide(i));
-  dotsContainer.appendChild(dot);
-});
+      blobs.forEach((blob, index) => {
+        const speed = (index + 1) * 0.02;
+        const x = (innerWidth / 2 - clientX) * speed;
+        const y = (innerHeight / 2 - clientY) * speed;
+        blob.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    });
 
-function goToSlide(n) {
-  slides[currentSlide].classList.remove('active');
-  dotsContainer.children[currentSlide].style.background = 'rgba(255,255,255,0.2)';
-  currentSlide = (n + slides.length) % slides.length;
-  slides[currentSlide].classList.add('active');
-  dotsContainer.children[currentSlide].style.background = 'linear-gradient(135deg, #a855f7, #ec4899)';
-}
+    // Count-up animation for results
+    const results = document.querySelectorAll('.result-num');
+    const resultsObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          const val = parseFloat(target.innerText);
+          const suffix = target.innerText.replace(/[0-9.]/g, '');
+          let start = 0;
+          const duration = 2000;
+          const startTime = performance.now();
 
-document.getElementById('prev-btn').addEventListener('click', () => {
-  clearInterval(autoSlide);
-  goToSlide(currentSlide - 1);
-  startAuto();
-});
-document.getElementById('next-btn').addEventListener('click', () => {
-  clearInterval(autoSlide);
-  goToSlide(currentSlide + 1);
-  startAuto();
-});
+          function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const ease = 1 - Math.pow(1 - progress, 4); // easeOutQuart
+            const currentVal = (ease * val).toFixed(val % 1 === 0 ? 0 : 1);
+            target.innerText = currentVal + suffix;
+            if (progress < 1) requestAnimationFrame(update);
+          }
+          requestAnimationFrame(update);
+          resultsObs.unobserve(target);
+        }
+      });
+    }, { threshold: 0.5 });
+    results.forEach(r => resultsObs.observe(r));
 
-function startAuto() {
-  autoSlide = setInterval(() => goToSlide(currentSlide + 1), 5000);
-}
-startAuto();
-
-// ---- Smooth scroll offset for fixed navbar ----
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    const href = this.getAttribute('href');
-    if (href === '#') return;
-    e.preventDefault();
-    const target = document.querySelector(href);
-    if (target) {
-      const offset = 80;
-      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
-  });
-  });
-
-// ---- Video Testimonial Switcher ----
-function switchVideo(url, initials, name, project, gradient) {
-  // Update iframe
-  document.getElementById('featured-video-frame').src = url;
-  
-  // Update active info
-  const avatar = document.getElementById('active-avatar');
-  avatar.textContent = initials;
-  avatar.style.background = gradient;
-  
-  document.getElementById('active-name').textContent = name;
-  document.getElementById('active-project').textContent = project;
-
-  // Update button states
-  const buttons = document.querySelectorAll('.video-selector-btn');
-  buttons.forEach(btn => {
-    btn.classList.remove('active-video-btn');
-    btn.style.boxShadow = 'none';
-    btn.style.borderColor = 'rgba(148,120,220,0.12)';
-  });
-  
-  // Find clicked button and style
-  const clickedBtn = event.currentTarget || event.target.closest('.video-selector-btn');
-  if (clickedBtn) {
-    clickedBtn.classList.add('active-video-btn');
-    clickedBtn.style.borderColor = 'rgba(124,58,237,0.25)';
-    clickedBtn.style.boxShadow = '0 0 0 2px rgba(124,58,237,0.15)';
-  }
-}
+    // Sticky nav background
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        nav.style.background = 'rgba(6,6,6,0.98)';
+        nav.style.backdropFilter = 'blur(14px)';
+        nav.style.padding = '16px 60px';
+      } else {
+        nav.style.background = 'linear-gradient(to bottom,rgba(6,6,6,0.97),transparent)';
+        nav.style.backdropFilter = 'blur(2px)';
+        nav.style.padding = '24px 60px';
+      }
+    });

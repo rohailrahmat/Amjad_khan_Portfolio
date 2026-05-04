@@ -1,1112 +1,648 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Amjad Khan | Social Media Strategist & Growth Expert</title>
-<link rel="icon" type="image/svg+xml" href="favicon.svg" />
-<meta name="description" content="Amjad Khan – Social Media Strategist helping brands scale on Instagram, TikTok & Facebook. 93% Job Success | Top Rated on Upwork." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="./style.css">
-<script>
-  tailwind.config = {
-  theme: {
-    extend: {
-      fontFamily: {
-        heading: ['Outfit', 'sans-serif'],
-        body: ['Plus Jakarta Sans', 'sans-serif'],
-      },
-      colors: {
-        brand: {
-          dark: '#0d0d14',
-          darker: '#08080f',
-          purple: '#4b1d3f',
-          violet: '#7c3aed',
-          pink: '#ec4899',
-          accent: '#a855f7',
-          glow: '#c084fc',
-        }
-      },
-      animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
-        'slide-up': 'slideUp 0.6s ease-out forwards',
-        'counter': 'counter 2s ease-out forwards',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-12px)' },
-        },
-        pulseGlow: {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(168,85,247,0.4)' },
-          '50%': { boxShadow: '0 0 40px rgba(168,85,247,0.8), 0 0 60px rgba(236,72,153,0.3)' },
-        },
-        slideUp: {
-          from: { opacity: '0', transform: 'translateY(30px)' },
-          to: { opacity: '1', transform: 'translateY(0)' },
-        }
-      }
-    }
-  }
-}
-</script>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Amjad Khan – Social Media Strategist helping brands scale on Instagram, TikTok & Facebook. 93% Job Success | Top Rated on Upwork.">
+  <title>Amjad Khan | Social Media Strategist</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <title>Amjad Khan | Social Media Strategist</title>
+
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 px-4 py-4">
-  <div class="max-w-6xl mx-auto flex items-center justify-between">
-    <a href="#home" class="font-heading font-bold text-xl tracking-tight">
-      <span class="grad-text">Amjad </span><span class="text-slate-800">Khan</span>
-    </a>
-    <!-- Desktop nav -->
-    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-500">
-      <a href="#about" class="hover-line hover:text-slate-900 transition-colors">About</a>
-      <a href="#services" class="hover-line hover:text-slate-900 transition-colors">Services</a>
-      <a href="#results" class="hover-line hover:text-slate-900 transition-colors">Results</a>
-      <a href="#portfolio" class="hover-line hover:text-slate-900 transition-colors">Portfolio</a>
-      <a href="#testimonials" class="hover-line hover:text-slate-900 transition-colors">Reviews</a>
-      <a href="#contact" class="btn-glow text-white px-5 py-2.5 rounded-full text-sm font-semibold">Hire Me</a>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <a href="#hero" class="nav-logo">Amjad Khan<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#portfolio">Work</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#skills">Skills</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Hire Me</a>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="hero-blob hero-blob-3"></div>
+      <div class="hero-grid"></div>
     </div>
-    <!-- Mobile hamburger -->
-    <button id="menu-btn" class="md:hidden text-slate-700 p-2" aria-label="Menu">
-      <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
-  </div>
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="md:hidden px-4 mt-2">
-    <div class="glass rounded-2xl p-6 flex flex-col gap-5 text-slate-600 text-base font-medium">
-      <a href="#about" class="mobile-link hover:text-slate-900 transition-colors">About</a>
-      <a href="#services" class="mobile-link hover:text-slate-900 transition-colors">Services</a>
-      <a href="#results" class="mobile-link hover:text-slate-900 transition-colors">Results</a>
-      <a href="#portfolio" class="mobile-link hover:text-slate-900 transition-colors">Portfolio</a>
-      <a href="#testimonials" class="mobile-link hover:text-slate-900 transition-colors">Reviews</a>
-      <a href="#contact" class="btn-glow text-white text-center py-3 rounded-full font-semibold">Hire Me</a>
-    </div>
-  </div>
-</nav>
 
-<!-- ===== HERO ===== -->
-<section id="home" class="hero-bg min-h-screen flex items-center pt-20 pb-16 px-4 relative overflow-hidden">
-  <!-- Ambient orbs -->
-  <div class="orb w-96 h-96 bg-purple-200 opacity-40 top-0 right-0"></div>
-  <div class="orb w-80 h-80 bg-pink-200 opacity-30 bottom-0 left-0"></div>
-
-  <div class="max-w-6xl mx-auto w-full relative z-10">
-    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-
-      <!-- Left: text content -->
-      <div class="flex-1 text-center lg:text-left">
-        <div class="inline-flex items-center gap-2 glass px-4 py-2 rounded-full text-sm text-purple-600 font-medium mb-8 reveal">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          Available for new projects
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-tag">
+          <span class="avail-dot"></span>
+          Strategist · Top Rated · 5+ Yrs Exp
         </div>
 
-        <h1 class="font-heading font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-6 reveal reveal-delay-1 text-slate-900">
-          I Build <span class="grad-text">Social Media</span><br/>Systems That<br/>Drive <span class="grad-text">Real Growth</span>
+        <h1 class="hero-headline">
+          Engineering<br>
+          <em>Social</em> Growth<br>
+          <span class="outline">at Scale.</span>
         </h1>
 
-        <p class="text-slate-500 text-lg lg:text-xl max-w-xl mx-auto lg:mx-0 mb-10 reveal reveal-delay-2 leading-relaxed">
-          Social Media Strategist helping brands scale on <span class="text-purple-600 font-medium">Instagram</span>, <span class="text-pink-500 font-medium">TikTok</span> & <span class="text-blue-600 font-medium">Facebook</span> — with strategy that converts, not just content that posts.
-        </p>
+        <p class="hero-sub">I build high-performance social media systems for brands who are tired of passive posting
+          and ready for measurable ROI.</p>
 
-        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 reveal reveal-delay-3">
-          <a href="#contact" class="btn-glow text-white px-8 py-4 rounded-full font-heading font-bold text-base">
-            Hire Me →
-          </a>
-          <a href="#portfolio" class="btn-outline-glow px-8 py-4 rounded-full font-heading font-bold text-base">
-            View Portfolio
-          </a>
-        </div>
-
-        <!-- Stats -->
-        <div class="flex flex-wrap gap-4 justify-center lg:justify-start reveal reveal-delay-4">
-          <div class="stat-card rounded-2xl px-6 py-4 text-center">
-            <div class="font-heading font-black text-3xl grad-text" data-counter="93" data-suffix="%">0%</div>
-            <div class="text-slate-400 text-xs mt-1 font-medium">Job Success</div>
-          </div>
-          <div class="stat-card rounded-2xl px-6 py-4 text-center">
-            <div class="font-heading font-black text-3xl grad-text" data-counter="6" data-prefix="$" data-suffix="K+">$0</div>
-            <div class="text-slate-400 text-xs mt-1 font-medium">Total Earnings</div>
-          </div>
-          <div class="stat-card rounded-2xl px-6 py-4 text-center">
-            <div class="font-heading font-black text-3xl grad-text" data-counter="28" data-suffix="">0</div>
-            <div class="text-slate-400 text-xs mt-1 font-medium">Total Jobs</div>
-          </div>
-          <div class="stat-card rounded-2xl px-6 py-4 text-center">
-            <div class="font-heading font-black text-3xl grad-text" data-counter="625" data-suffix="">0</div>
-            <div class="text-slate-400 text-xs mt-1 font-medium">Hours Worked</div>
-          </div>
+        <div class="hero-actions">
+          <a href="https://www.upwork.com/freelancers/~015113d2188a94384d" class="btn-primary" target="_blank">Start
+            Your Project</a>
+          <a href="#portfolio" class="btn-ghost">Explore My Work <svg width="16" height="16" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg></a>
         </div>
       </div>
 
-      <!-- Right: profile -->
-      <div class="flex-shrink-0 flex flex-col items-center gap-6 reveal reveal-delay-2">
-        <div class="profile-card">
-          <div class="profile-card__glow"></div>
-          <div class="profile-card__frame">
-            <img src="./img/1.png" alt="Amjad Khan" class="profile-card__image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <span class="font-heading font-black text-slate-900 hidden" style="font-size: 90px; line-height:1;">AK</span>
-            <div class="profile-card__label">Growth Strategist</div>
+      <div class="hero-profile">
+        <div class="hero-profile-container" id="profileTilt">
+          <div class="hero-profile-frame">
+            <img src="./img/1.png" alt="Amjad Khan" class="hero-profile-img">
           </div>
-        </div>
-
-        <!-- Badges -->
-        <div class="flex gap-3">
-          <div class="glass px-4 py-2 rounded-full text-xs font-semibold flex items-center gap-2 text-amber-600">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-            Top Rated
-          </div>
-          <div class="glass px-4 py-2 rounded-full text-xs font-semibold flex items-center gap-2 text-emerald-600">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            Verified
-          </div>
-        </div>
-
-        <!-- Location -->
-        <div class="text-slate-500 text-sm flex items-center gap-2">
-          <svg class="w-4 h-4 text-purple-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
-          Gilgit, Pakistan
         </div>
       </div>
+    </div>
 
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span class="scroll-text">Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span class="marquee-item">Social Media Manager</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">Social Media Marketer</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">Social Media Strategist</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">Content Creation</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">Video Editing</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">SEO (Optimization)</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">Email Marketing</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">WordPress Development</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">Lead Generation</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">Organic Growth</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">Social Media Ads</span><span class="marquee-item marquee-dot">✦</span>
+      <!-- Repeat for seamless loop -->
+      <span class="marquee-item">Social Media Manager</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">Social Media Marketer</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">Social Media Strategist</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">Content Creation</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">Video Editing</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">SEO (Optimization)</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">Email Marketing</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">WordPress Development</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">Lead Generation</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">Organic Growth</span><span class="marquee-item marquee-dot">✦</span>
+      <span class="marquee-item">Social Media Ads</span><span class="marquee-item marquee-dot">✦</span>
     </div>
   </div>
-</section>
 
-<div class="section-divider"></div>
-
-<!-- ===== ABOUT ===== -->
-<section id="about" class="py-24 px-4 relative section-alt">
-  <div class="orb w-72 h-72 bg-purple-100 opacity-10 top-10 left-0"></div>
-  <div class="max-w-5xl mx-auto relative z-10">
-    <div class="text-center mb-16 reveal">
-      <p class="text-purple-600 font-semibold text-sm uppercase tracking-widest mb-3">Who I Am</p>
-      <h2 class="font-heading font-black text-4xl lg:text-5xl text-slate-900">About <span class="grad-text">Amjad Khan</span></h2>
-      <div class="section-line mx-auto"></div>
+  <!-- PLATFORMS -->
+  <section id="platforms">
+    <div class="platforms-header reveal">
+      <div class="section-label" style="justify-content:center;">Multi-Platform Expertise</div>
+      <h2 class="section-headline">Platforms &<br><em>Ecosystems</em></h2>
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div class="reveal">
-        <p class="text-slate-600 text-lg leading-relaxed mb-6">
-          I'm a <span class="text-purple-600 font-semibold">Social Media Strategist</span> with 5+ years of hands-on experience managing and scaling accounts across Instagram, TikTok, Facebook, and LinkedIn for brands, local businesses, creators, and agencies.
-        </p>
-        <p class="text-slate-500 leading-relaxed mb-8">
-          Most brands fail because they post without strategy. I build complete social media systems that drive <strong class="text-slate-900">real growth, engagement, and leads</strong> — not vanity metrics. My approach is strategy-first, data-driven, and focused on long-term brand authority.
-        </p>
-
-        <div class="flex flex-wrap gap-3">
-          <span class="glass px-4 py-2 rounded-full text-sm text-purple-600 font-medium">5+ Years Experience</span>
-          <span class="glass px-4 py-2 rounded-full text-sm text-pink-500 font-medium">Multi-Platform Expert</span>
-          <span class="glass px-4 py-2 rounded-full text-sm text-blue-600 font-medium">LUMS Graduate</span>
-          <span class="glass px-4 py-2 rounded-full text-sm text-emerald-600 font-medium">Fast Responder (0–4 hrs)</span>
-          <span class="glass px-4 py-2 rounded-full text-sm text-amber-600 font-medium">Top Rated</span>
-        </div>
+    <div class="platforms-grid reveal">
+      <div class="platform-card">
+        <div class="platform-icon"><i class="fab fa-instagram"></i></div>
+        <span class="platform-name">Instagram</span>
       </div>
-
-      <div class="grid grid-cols-2 gap-4 reveal reveal-delay-2">
-        <div class="grad-border rounded-2xl p-6 text-center">
-          <div class="text-3xl font-heading font-black grad-text mb-2">5+</div>
-          <div class="text-slate-500 text-sm">Years Experience</div>
-        </div>
-        <div class="grad-border rounded-2xl p-6 text-center">
-          <div class="text-3xl font-heading font-black grad-text mb-2">28+</div>
-          <div class="text-slate-500 text-sm">Happy Clients</div>
-        </div>
-        <div class="grad-border rounded-2xl p-6 text-center">
-          <div class="text-3xl font-heading font-black grad-text mb-2">93%</div>
-          <div class="text-slate-500 text-sm">Success Rate</div>
-        </div>
-        <div class="grad-border rounded-2xl p-6 text-center">
-          <div class="text-3xl font-heading font-black grad-text mb-2">5★</div>
-          <div class="text-slate-500 text-sm">Avg. Rating</div>
-        </div>
-
-        <!-- Education -->
-        <div class="col-span-2 glass rounded-2xl p-5">
-          <div class="text-xs text-purple-600 uppercase font-semibold tracking-wider mb-3">Education</div>
-          <div class="flex items-start gap-3 mb-3">
-            <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg class="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/></svg>
-            </div>
-            <div>
-              <div class="text-slate-900 text-sm font-semibold">LUMS — Bachelor's, Marketing</div>
-              <div class="text-slate-400 text-xs">2019 – 2023</div>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <svg class="w-4 h-4 text-indigo-600" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z"/></svg>
-            </div>
-            <div>
-              <div class="text-slate-900 text-sm font-semibold">Aga Khan High School — Computer Science</div>
-              <div class="text-slate-400 text-xs">2015 – 2019</div>
-            </div>
-          </div>
-        </div>
+      <div class="platform-card">
+        <div class="platform-icon"><i class="fab fa-tiktok"></i></div>
+        <span class="platform-name">TikTok</span>
       </div>
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- ===== SERVICES ===== -->
-<section id="services" class="py-24 px-4 relative">
-  <div class="orb w-96 h-96 bg-pink-900 opacity-10 bottom-0 right-0"></div>
-  <div class="max-w-6xl mx-auto relative z-10">
-    <div class="text-center mb-16 reveal">
-      <p class="text-purple-600 font-semibold text-sm uppercase tracking-widest mb-3">What I Do</p>
-      <h2 class="font-heading font-black text-4xl lg:text-5xl text-slate-900">Core <span class="grad-text">Services</span></h2>
-      <div class="section-line mx-auto"></div>
-      <p class="text-slate-500 mt-6 max-w-xl mx-auto">Every service is built around one goal: turning your social media into a growth engine that works for you 24/7.</p>
-    </div>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-      <!-- Service 1 -->
-      <div class="service-card rounded-2xl p-6 reveal">
-        <div class="w-12 h-12 rounded-xl mb-5 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(168,85,247,0.2), rgba(168,85,247,0.05));">
-          <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-        </div>
-        <h3 class="font-heading font-bold text-slate-900 text-lg mb-3">Social Media Strategy</h3>
-        <p class="text-slate-500 text-sm leading-relaxed mb-4">Full strategy from awareness to lead generation. Competitor analysis, hashtag research, brand voice & content direction.</p>
-        <div class="flex flex-wrap gap-2">
-          <span class="text-xs text-purple-600 bg-purple-100 px-2 py-1 rounded-full">Instagram</span>
-          <span class="text-xs text-purple-600 bg-purple-100 px-2 py-1 rounded-full">TikTok</span>
-          <span class="text-xs text-purple-600 bg-purple-100 px-2 py-1 rounded-full">Facebook</span>
-        </div>
+      <div class="platform-card">
+        <div class="platform-icon"><i class="fab fa-linkedin-in"></i></div>
+        <span class="platform-name">LinkedIn</span>
       </div>
-
-      <!-- Service 2 -->
-      <div class="service-card rounded-2xl p-6 reveal reveal-delay-1">
-        <div class="w-12 h-12 rounded-xl mb-5 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(236,72,153,0.2), rgba(236,72,153,0.05));">
-          <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-        </div>
-        <h3 class="font-heading font-bold text-slate-900 text-lg mb-3">Content Creation</h3>
-        <p class="text-slate-500 text-sm leading-relaxed mb-4">Reels, carousels, static posts, caption writing & Canva Pro designs. Brand-consistent visuals that convert viewers to followers.</p>
-        <div class="flex flex-wrap gap-2">
-          <span class="text-xs text-pink-500 bg-pink-100 px-2 py-1 rounded-full">Reels</span>
-          <span class="text-xs text-pink-500 bg-pink-100 px-2 py-1 rounded-full">Canva Pro</span>
-          <span class="text-xs text-pink-500 bg-pink-100 px-2 py-1 rounded-full">Carousels</span>
-        </div>
+      <div class="platform-card">
+        <div class="platform-icon"><i class="fab fa-youtube"></i></div>
+        <span class="platform-name">YouTube</span>
       </div>
-
-      <!-- Service 3 -->
-      <div class="service-card rounded-2xl p-6 reveal reveal-delay-2">
-        <div class="w-12 h-12 rounded-xl mb-5 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(99,102,241,0.05));">
-          <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-        </div>
-        <h3 class="font-heading font-bold text-slate-900 text-lg mb-3">Growth & Engagement</h3>
-        <p class="text-slate-500 text-sm leading-relaxed mb-4">Daily audience engagement, comment & DM management, community building. Organic growth without paid ads.</p>
-        <div class="flex flex-wrap gap-2">
-          <span class="text-xs text-indigo-600 bg-indigo-100 px-2 py-1 rounded-full">Organic</span>
-          <span class="text-xs text-indigo-600 bg-indigo-100 px-2 py-1 rounded-full">Community</span>
-          <span class="text-xs text-indigo-600 bg-indigo-100 px-2 py-1 rounded-full">DMs</span>
-        </div>
+      <div class="platform-card">
+        <div class="platform-icon"><i class="fab fa-pinterest-p"></i></div>
+        <span class="platform-name">Pinterest</span>
       </div>
-
-      <!-- Service 4 -->
-      <div class="service-card rounded-2xl p-6 reveal reveal-delay-3">
-        <div class="w-12 h-12 rounded-xl mb-5 flex items-center justify-center" style="background: linear-gradient(135deg, rgba(20,184,166,0.2), rgba(20,184,166,0.05));">
-          <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
-        </div>
-        <h3 class="font-heading font-bold text-slate-900 text-lg mb-3">Lead Generation</h3>
-        <p class="text-slate-500 text-sm leading-relaxed mb-4">Content calendars that convert, funnel-focused social strategy. Turn followers into paying customers.</p>
-        <div class="flex flex-wrap gap-2">
-          <span class="text-xs text-teal-600 bg-teal-100 px-2 py-1 rounded-full">Funnels</span>
-          <span class="text-xs text-teal-600 bg-teal-100 px-2 py-1 rounded-full">Ads</span>
-          <span class="text-xs text-teal-600 bg-teal-100 px-2 py-1 rounded-full">Sales</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- ===== RESULTS ===== -->
-<section id="results" class="py-24 px-4 relative section-alt">
-  <!-- Dynamic Orbs for background -->
-  <div class="orb w-96 h-96 bg-purple-600 opacity-5 top-0 right-0"></div>
-  <div class="orb w-72 h-72 bg-pink-500 opacity-5 bottom-0 left-10"></div>
-  
-  <div class="max-w-6xl mx-auto relative z-10">
-    <div class="text-center mb-16 reveal">
-      <p class="text-purple-600 font-semibold text-sm uppercase tracking-widest mb-3">Proven Impact</p>
-      <h2 class="font-heading font-black text-4xl lg:text-5xl text-slate-900">Outcomes That <span class="grad-text">Scale</span></h2>
-      <div class="section-line mx-auto"></div>
-      <p class="text-slate-500 mt-5 max-w-xl mx-auto">Skip the vanity metrics. My methodology is heavily engineered around measurable business growth and high-converting audience attention.</p>
-    </div>
-
-    <!-- Bento Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      
-      <!-- Big Card: Audience Growth -->
-      <div class="md:col-span-2 lg:col-span-2 rounded-3xl p-8 relative overflow-hidden group reveal shadow-[0_8px_30px_rgba(0,0,0,0.04)] bg-white border border-slate-100 hover:border-purple-200 transition-all duration-500">
-        <div class="absolute -right-10 -top-10 w-40 h-40 bg-purple-100 rounded-full blur-3xl opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
-        <div class="relative z-10 flex flex-col h-full justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-full flex items-center justify-center mb-5" style="background: linear-gradient(135deg, #7c3aed, #a855f7);">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-            </div>
-            <h3 class="font-heading font-extrabold text-slate-900 text-2xl mb-2">Audience Growth</h3>
-            <p class="text-slate-500 text-sm max-w-xs">Average follower growth across all managed client accounts within the first 90 days.</p>
-          </div>
-          <div class="mt-10 flex items-end justify-between">
-            <div class="font-heading font-black text-6xl text-transparent bg-clip-text" style="background-image: linear-gradient(135deg, #7c3aed, #c084fc);" data-counter="300" data-suffix="%+">0%</div>
-            <!-- Decorative mini line-chart -->
-            <svg class="w-24 h-12 text-purple-300 opacity-70 group-hover:opacity-100 transition-opacity" viewBox="0 0 100 50" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-               <path d="M5,40 L30,25 L50,35 L90,10" class="drop-shadow-md" />
-               <circle cx="90" cy="10" r="4" fill="currentColor"/>
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <!-- Small Card 1: Engagement -->
-      <div class="md:col-span-1 lg:col-span-1 rounded-3xl p-8 relative overflow-hidden group reveal reveal-delay-1 shadow-[0_8px_30px_rgba(0,0,0,0.06)] bg-[#0d0d14] text-white border border-slate-800 hover:border-pink-500/30 transition-all duration-500">
-        <div class="absolute inset-0 opacity-20" style="background: radial-gradient(circle at top right, #ec4899, transparent 70%);"></div>
-        <div class="relative z-10 flex flex-col h-full justify-between">
-          <div>
-            <div class="w-10 h-10 rounded-full flex items-center justify-center mb-5 bg-white/10 backdrop-blur">
-              <svg class="w-5 h-5 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-            </div>
-            <h3 class="font-heading font-bold text-xl mb-2 text-white">Engagement</h3>
-            <p class="text-slate-400 text-xs">Likes, comments & shares heavily multiplied</p>
-          </div>
-          <div class="mt-8 font-heading font-black text-5xl text-pink-400 drop-shadow-lg" data-counter="500" data-suffix="%+">0%</div>
-        </div>
-      </div>
-
-      <!-- Small Card 2: Lead Gen -->
-      <div class="md:col-span-1 lg:col-span-1 rounded-3xl p-8 relative overflow-hidden group reveal reveal-delay-2 shadow-[0_8px_30px_rgba(0,0,0,0.04)] bg-white border border-slate-100 hover:border-blue-200 transition-all duration-500 hover:-translate-y-1">
-        <div class="absolute inset-0 bg-gradient-to-br from-transparent to-blue-50/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-        <div class="relative z-10 flex flex-col h-full justify-between">
-          <div>
-            <div class="w-10 h-10 rounded-full flex items-center justify-center mb-5 bg-blue-100/50">
-              <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-            </div>
-            <h3 class="font-heading font-bold text-slate-900 text-xl mb-2">Lead Gen</h3>
-            <p class="text-slate-500 text-xs">Boosted inbound inquiries & qualified DMs</p>
-          </div>
-          <div class="mt-8 font-heading font-black text-5xl text-blue-600" data-counter="200" data-suffix="%+">0%</div>
-        </div>
-      </div>
-
-      <!-- Medium Card: Brand Authority -->
-      <div class="md:col-span-2 lg:col-span-2 rounded-3xl p-6 lg:p-8 relative overflow-hidden group reveal shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-slate-100 transition-all duration-500 flex items-center" style="background: linear-gradient(135deg, #fffcf5, #ffffff);">
-        <div class="absolute -left-10 -bottom-10 w-40 h-40 bg-amber-100 rounded-full blur-3xl opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
-        <div class="relative z-10 flex items-center h-full gap-5 sm:gap-6">
-          <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex-shrink-0 flex items-center justify-center transition-transform group-hover:scale-105" style="background: linear-gradient(135deg, #f59e0b, #fbbf24); box-shadow: 0 10px 25px rgba(245, 158, 11, 0.25);">
-            <svg class="w-8 h-8 sm:w-10 sm:h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
-          </div>
-          <div>
-            <div class="font-heading font-black text-2xl sm:text-3xl text-slate-900 mb-1">Top 1%</div>
-            <h3 class="font-heading font-bold text-amber-600 text-base sm:text-lg mb-1 sm:mb-2">Industry Authority</h3>
-            <p class="text-slate-500 text-xs sm:text-sm">Positioning brands as niche leaders through high-ticket viral mechanics.</p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Feature highlight text cell -->
-      <div class="md:col-span-2 lg:col-span-2 rounded-3xl p-8 relative flex items-center justify-center reveal shadow-[0_8px_30px_rgba(0,0,0,0.06)] bg-[#0A0A10] border border-slate-800 text-white overflow-hidden group">
-         <div class="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity" style="background: radial-gradient(circle at center, #7c3aed, transparent 65%);"></div>
-         <p class="relative z-10 text-center font-heading text-lg sm:text-xl font-medium leading-relaxed italic text-purple-50 max-w-sm">
-           "The definitive shift from passive posting to proactive scaling."
-         </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== EXPERIENCE TIMELINE ===== -->
-<section id="experience" class="py-24 px-4 relative" style="background: rgba(255,255,255,0.01);">
-  <div class="max-w-3xl mx-auto relative z-10">
-    <div class="text-center mb-16 reveal">
-      <p class="text-purple-600 font-semibold text-sm uppercase tracking-widest mb-3">Career Path</p>
-      <h2 class="font-heading font-black text-4xl lg:text-5xl text-slate-900">Experience <span class="grad-text">Timeline</span></h2>
-      <div class="section-line mx-auto"></div>
-    </div>
-
-    <div class="relative pl-10">
-      <div class="timeline-line"></div>
-
-      <!-- Item 1 -->
-      <div class="timeline-item relative mb-10 reveal">
-        <div class="glass rounded-2xl p-6">
-          <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
-            <div>
-              <h3 class="font-heading font-bold text-slate-900 text-lg">Social Media Strategist</h3>
-              <p class="text-purple-600 font-medium text-sm">Marketix International</p>
-            </div>
-            <span class="glass px-3 py-1 rounded-full text-xs text-slate-500 flex-shrink-0">Jan 2025 – Present</span>
-          </div>
-          <p class="text-slate-500 text-sm leading-relaxed">Creating scroll-stopping content across Instagram, TikTok, Facebook, and LinkedIn. Focused on Social Media Marketing and strategy to boost engagement and brand visibility for coaching & personal brand clients.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-xs text-purple-600 bg-purple-100 px-3 py-1 rounded-full">Instagram</span>
-            <span class="text-xs text-purple-600 bg-purple-100 px-3 py-1 rounded-full">TikTok</span>
-            <span class="text-xs text-purple-600 bg-purple-100 px-3 py-1 rounded-full">LinkedIn</span>
-            <span class="text-xs text-purple-600 bg-purple-100 px-3 py-1 rounded-full">Content Strategy</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 2 -->
-      <div class="timeline-item relative mb-10 reveal reveal-delay-1">
-        <div class="glass rounded-2xl p-6">
-          <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
-            <div>
-              <h3 class="font-heading font-bold text-slate-900 text-lg">Social Media Manager</h3>
-              <p class="text-pink-500 font-medium text-sm">Avari Xpress Hotels</p>
-            </div>
-            <span class="glass px-3 py-1 rounded-full text-xs text-slate-500 flex-shrink-0">Feb 2023 – Jun 2025</span>
-          </div>
-          <p class="text-slate-500 text-sm leading-relaxed">Managed the complete social media presence for Avari Xpress Hotels (Lahore, Islamabad, Faisalabad, Gilgit). Elevated the brand's luxury image and drove direct bookings through compelling content across Instagram, Facebook, TikTok, YouTube & LinkedIn.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-xs text-pink-500 bg-pink-100 px-3 py-1 rounded-full">Hospitality</span>
-            <span class="text-xs text-pink-500 bg-pink-100 px-3 py-1 rounded-full">Reels</span>
-            <span class="text-xs text-pink-500 bg-pink-100 px-3 py-1 rounded-full">Brand Strategy</span>
-            <span class="text-xs text-pink-500 bg-pink-100 px-3 py-1 rounded-full">Campaigns</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 3 -->
-      <div class="timeline-item relative mb-10 reveal reveal-delay-2">
-        <div class="glass rounded-2xl p-6">
-          <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
-            <div>
-              <h3 class="font-heading font-bold text-slate-900 text-lg">Social Media Growth Strategist</h3>
-              <p class="text-blue-600 font-medium text-sm">Freelancing Hub</p>
-            </div>
-            <span class="glass px-3 py-1 rounded-full text-xs text-slate-500 flex-shrink-0">May 2022 – Oct 2023</span>
-          </div>
-          <p class="text-slate-500 text-sm leading-relaxed">Results-driven Social Media Manager with a proven track record of growing brands through strategic content, organic engagement, and platform-specific trends. Specialized in Instagram & TikTok growth without paid ads.</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <span class="text-xs text-blue-600 bg-blue-100 px-3 py-1 rounded-full">Organic Growth</span>
-            <span class="text-xs text-blue-600 bg-blue-100 px-3 py-1 rounded-full">Community</span>
-            <span class="text-xs text-blue-600 bg-blue-100 px-3 py-1 rounded-full">TikTok</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== PORTFOLIO ===== -->
-<section id="portfolio" class="py-24 px-4 relative">
-  <div class="max-w-6xl mx-auto relative z-10">
-    <div class="text-center mb-16 reveal">
-      <p class="text-purple-600 font-semibold text-sm uppercase tracking-widest mb-3">My Work</p>
-      <h2 class="font-heading font-black text-4xl lg:text-5xl text-slate-900">Featured <span class="grad-text">Portfolio</span></h2>
-      <div class="section-line mx-auto"></div>
-      <p class="text-slate-500 mt-5 max-w-xl mx-auto">Real results for real brands — click any project to view full case details on Upwork.</p>
-    </div>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <!-- Portfolio item 1 -->
-      <a href="https://www.upwork.com/freelancers/amjadkhan" target="_blank" rel="noopener" class="portfolio-card group rounded-2xl overflow-hidden reveal block shadow-md hover:shadow-xl transition-shadow duration-400">
-        <div class="relative" style="padding-bottom: 72%;">
-          <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=80" alt="Instagram Growth Strategy" class="absolute inset-0 w-full h-full object-cover" loading="lazy"/>
-          <div class="overlay absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-            <span class="inline-block bg-white/20 backdrop-blur-sm border border-white/30 px-3 py-1 rounded-full text-xs text-white font-semibold mb-3 uppercase tracking-wider">Instagram Growth</span>
-            <h3 class="font-heading font-bold text-white text-xl mb-2">Brand Growth Strategy</h3>
-            <p class="text-white/80 text-sm mb-4">300%+ follower growth in 90 days</p>
-            <span class="inline-flex items-center gap-2 bg-white text-purple-700 px-4 py-2 rounded-full text-xs font-bold transition-transform group-hover:scale-105">
-              View on Upwork
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </span>
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 px-4 py-3 flex items-center justify-between" style="background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);">
-            <span class="text-white font-semibold text-sm font-heading">Instagram Growth</span>
-            <span class="text-white/70 text-xs">+300% Followers</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Portfolio item 2 -->
-      <a href="https://www.upwork.com/freelancers/amjadkhan" target="_blank" rel="noopener" class="portfolio-card group rounded-2xl overflow-hidden reveal reveal-delay-1 block shadow-md hover:shadow-xl transition-shadow">
-        <div class="relative" style="padding-bottom: 72%;">
-          <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80" alt="Content Design & Brand Kit" class="absolute inset-0 w-full h-full object-cover" loading="lazy"/>
-          <div class="overlay absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-            <span class="inline-block bg-white/20 backdrop-blur-sm border border-white/30 px-3 py-1 rounded-full text-xs text-white font-semibold mb-3 uppercase tracking-wider">Content Design</span>
-            <h3 class="font-heading font-bold text-white text-xl mb-2">Visual Brand Identity</h3>
-            <p class="text-white/80 text-sm mb-4">Complete Canva Pro brand kit & templates</p>
-            <span class="inline-flex items-center gap-2 bg-white text-purple-700 px-4 py-2 rounded-full text-xs font-bold transition-transform group-hover:scale-105">
-              View on Upwork
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </span>
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 px-4 py-3 flex items-center justify-between" style="background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);">
-            <span class="text-white font-semibold text-sm font-heading">Content Design</span>
-            <span class="text-white/70 text-xs">Canva Pro</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Portfolio item 3 -->
-      <a href="https://www.upwork.com/freelancers/amjadkhan" target="_blank" rel="noopener" class="portfolio-card group rounded-2xl overflow-hidden reveal reveal-delay-2 block shadow-md hover:shadow-xl transition-shadow">
-        <div class="relative" style="padding-bottom: 72%;">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Paid Ads Campaign Management" class="absolute inset-0 w-full h-full object-cover" loading="lazy"/>
-          <div class="overlay absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-            <span class="inline-block bg-white/20 backdrop-blur-sm border border-white/30 px-3 py-1 rounded-full text-xs text-white font-semibold mb-3 uppercase tracking-wider">Paid Ads</span>
-            <h3 class="font-heading font-bold text-white text-xl mb-2">Ads Campaign Management</h3>
-            <p class="text-white/80 text-sm mb-4">Meta ads setup & 4.2x ROAS optimization</p>
-            <span class="inline-flex items-center gap-2 bg-white text-purple-700 px-4 py-2 rounded-full text-xs font-bold transition-transform group-hover:scale-105">
-              View on Upwork
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </span>
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 px-4 py-3 flex items-center justify-between" style="background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);">
-            <span class="text-white font-semibold text-sm font-heading">Campaign Strategy</span>
-            <span class="text-white/70 text-xs">4.2x ROAS</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Portfolio item 4 -->
-      <a href="https://www.upwork.com/freelancers/amjadkhan" target="_blank" rel="noopener" class="portfolio-card group rounded-2xl overflow-hidden reveal block shadow-md hover:shadow-xl transition-shadow">
-        <div class="relative" style="padding-bottom: 72%;">
-          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80" alt="Avari Hotels Social Media" class="absolute inset-0 w-full h-full object-cover" loading="lazy"/>
-          <div class="overlay absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-            <span class="inline-block bg-white/20 backdrop-blur-sm border border-white/30 px-3 py-1 rounded-full text-xs text-white font-semibold mb-3 uppercase tracking-wider">Hospitality Branding</span>
-            <h3 class="font-heading font-bold text-white text-xl mb-2">Hotel Social Presence</h3>
-            <p class="text-white/80 text-sm mb-4">Full social strategy for luxury hotel chain</p>
-            <span class="inline-flex items-center gap-2 bg-white text-purple-700 px-4 py-2 rounded-full text-xs font-bold transition-transform group-hover:scale-105">
-              View on Upwork
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </span>
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 px-4 py-3 flex items-center justify-between" style="background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);">
-            <span class="text-white font-semibold text-sm font-heading">Hotel Branding</span>
-            <span class="text-white/70 text-xs">Avari Hotels</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Portfolio item 5 -->
-      <a href="https://www.upwork.com/freelancers/amjadkhan" target="_blank" rel="noopener" class="portfolio-card group rounded-2xl overflow-hidden reveal reveal-delay-1 block shadow-md hover:shadow-xl transition-shadow">
-        <div class="relative" style="padding-bottom: 72%;">
-          <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80" alt="E-commerce Social Media Strategy" class="absolute inset-0 w-full h-full object-cover" loading="lazy"/>
-          <div class="overlay absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-            <span class="inline-block bg-white/20 backdrop-blur-sm border border-white/30 px-3 py-1 rounded-full text-xs text-white font-semibold mb-3 uppercase tracking-wider">E-commerce</span>
-            <h3 class="font-heading font-bold text-white text-xl mb-2">E-commerce Social Strategy</h3>
-            <p class="text-white/80 text-sm mb-4">Shopify brand scaling via Instagram & ads</p>
-            <span class="inline-flex items-center gap-2 bg-white text-purple-700 px-4 py-2 rounded-full text-xs font-bold transition-transform group-hover:scale-105">
-              View on Upwork
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </span>
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 px-4 py-3 flex items-center justify-between" style="background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);">
-            <span class="text-white font-semibold text-sm font-heading">E-commerce Growth</span>
-            <span class="text-white/70 text-xs">Shopify + Meta</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Portfolio item 6 -->
-      <a href="https://www.upwork.com/freelancers/amjadkhan" target="_blank" rel="noopener" class="portfolio-card group rounded-2xl overflow-hidden reveal reveal-delay-2 block shadow-md hover:shadow-xl transition-shadow">
-        <div class="relative" style="padding-bottom: 72%;">
-          <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=800&q=80" alt="TikTok Reels Strategy" class="absolute inset-0 w-full h-full object-cover" loading="lazy"/>
-          <div class="overlay absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-            <span class="inline-block bg-white/20 backdrop-blur-sm border border-white/30 px-3 py-1 rounded-full text-xs text-white font-semibold mb-3 uppercase tracking-wider">TikTok & Reels</span>
-            <h3 class="font-heading font-bold text-white text-xl mb-2">Viral Reels Strategy</h3>
-            <p class="text-white/80 text-sm mb-4">Short-form content — 2.4M organic views</p>
-            <span class="inline-flex items-center gap-2 bg-white text-purple-700 px-4 py-2 rounded-full text-xs font-bold transition-transform group-hover:scale-105">
-              View on Upwork
-              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-            </span>
-          </div>
-          <div class="absolute bottom-0 left-0 right-0 px-4 py-3 flex items-center justify-between" style="background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);">
-            <span class="text-white font-semibold text-sm font-heading">TikTok & Reels</span>
-            <span class="text-white/70 text-xs">2.4M Views</span>
-          </div>
-        </div>
-      </a>
-
-    </div>
-
-    <!-- View all on Upwork CTA -->
-    <div class="text-center mt-14 reveal">
-      <a href="https://www.upwork.com/freelancers/~015113d2188a94384d?referrer_url_path=%2Fnx%2Fsearch%2Ftalent%2Fdetails%2F~015113d2188a94384d%2Fprofile" target="_blank" rel="noopener"
-         class="inline-flex items-center gap-3 btn-glow text-white px-10 py-4 rounded-full font-heading font-bold text-base">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg>
-        View Full Profile on Upwork
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-      </a>
-      <p class="text-slate-400 text-sm mt-4">28+ completed jobs · 93% Job Success · Top Rated</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- ===== TESTIMONIALS ===== -->
-<section id="testimonials" class="py-24 px-4 relative section-alt">
-  <div class="max-w-6xl mx-auto relative z-10">
-
-    <div class="text-center mb-16 reveal">
-      <p class="text-purple-600 font-semibold text-sm uppercase tracking-widest mb-3">Client Love</p>
-      <h2 class="font-heading font-black text-4xl lg:text-5xl text-slate-900">What Clients <span class="grad-text">Say</span></h2>
-      <div class="section-line mx-auto"></div>
-      <p class="text-slate-500 mt-5 max-w-xl mx-auto">Real feedback from real clients — watch and read what they experienced working with me.</p>
-    </div>
-
-    <!-- ===== VIDEO TESTIMONIALS ===== -->
-    <div class="mb-20 reveal">
-      <div class="flex items-center gap-2 mb-8">
-        <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #7c3aed, #a855f7);">
-          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-        </div>
-        <h3 class="font-heading font-bold text-slate-900 text-xl">Video Testimonials</h3>
-      </div>
-
-      <!-- Featured Video Player -->
-      <div class="grid lg:grid-cols-5 gap-6 items-start">
-
-        <!-- Main featured player -->
-        <div class="lg:col-span-3">
-          <div id="featured-video-wrap" class="relative rounded-2xl overflow-hidden shadow-xl" style="padding-bottom: 56.25%;">
-            <iframe
-              id="featured-video-frame"
-              class="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/IOlbu9Z_TL8"
-              title="Client Video Testimonial"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <!-- Active client name below player -->
-          <div class="mt-4 flex items-center gap-3">
-            <div id="active-avatar" class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-white text-sm flex-shrink-0" style="background: linear-gradient(135deg, #7c3aed, #a855f7);">JT</div>
-            <div>
-              <div id="active-name" class="font-heading font-bold text-slate-900">James T.</div>
-              <div id="active-project" class="text-slate-500 text-xs">Instagram Organic Growth · Jan 2026</div>
-            </div>
-            <div class="ml-auto stars text-sm">★★★★★</div>
-          </div>
-        </div>
-
-        <!-- Video selector sidebar -->
-        <div class="lg:col-span-2 flex flex-col gap-3">
-          <p class="text-slate-400 text-xs font-medium uppercase tracking-widest mb-1">Select a client</p>
-
-          <!-- Client 1 -->
-          <button onclick="switchVideo('https://www.youtube.com/embed/IOlbu9Z_TL8','JT','James T.','Instagram Organic Growth · Jan 2026','linear-gradient(135deg,#7c3aed,#a855f7)')"
-            class="video-selector-btn active-video-btn w-full text-left flex items-center gap-3 p-3 rounded-xl border transition-all duration-300 group"
-            style="background:#ffffff; border-color: rgba(124,58,237,0.25); box-shadow: 0 0 0 2px rgba(124,58,237,0.15);">
-            <div class="relative flex-shrink-0">
-              <div class="w-14 h-10 rounded-lg overflow-hidden bg-slate-100 flex items-center justify-center" style="background: linear-gradient(135deg,#7c3aed,#a855f7);">
-                <span class="font-bold text-white text-sm">JT</span>
-              </div>
-              <div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-purple-600 flex items-center justify-center">
-                <svg class="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="min-w-0">
-              <div class="font-semibold text-slate-900 text-sm truncate">James T.</div>
-              <div class="text-slate-400 text-xs truncate">Instagram Growth</div>
-            </div>
-            <div class="ml-auto stars text-xs flex-shrink-0">★★★★★</div>
-          </button>
-
-          <!-- Client 2 -->
-          <button onclick="switchVideo('https://www.youtube.com/embed/Po0NbcHALUg?rel=0&modestbranding=1','MR','Maria R.','Social Media Marketing · Dec 2025','linear-gradient(135deg,#ec4899,#f472b6)')"
-            class="video-selector-btn w-full text-left flex items-center gap-3 p-3 rounded-xl border transition-all duration-300 group"
-            style="background:#ffffff; border-color: rgba(148,120,220,0.12);">
-            <div class="relative flex-shrink-0">
-              <div class="w-14 h-10 rounded-lg overflow-hidden relative flex items-center justify-center" style="background: linear-gradient(135deg,#ec4899,#f472b6);">
-                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=150&q=80" alt="Maria R." class="absolute inset-0 w-full h-full object-cover">
-              </div>
-              <div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-pink-500 flex items-center justify-center">
-                <svg class="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="min-w-0">
-              <div class="font-semibold text-slate-900 text-sm truncate">Maria R.</div>
-              <div class="text-slate-400 text-xs truncate">Social Media Marketing</div>
-            </div>
-            <div class="ml-auto stars text-xs flex-shrink-0">★★★★★</div>
-          </button>
-
-          <!-- Client 3 -->
-          <button onclick="switchVideo('https://www.youtube.com/embed/zqb6KUSbKaI?rel=0&modestbranding=1','AS','Alex S.','Social Media Manager · Dec 2025','linear-gradient(135deg,#0ea5e9,#38bdf8)')"
-            class="video-selector-btn w-full text-left flex items-center gap-3 p-3 rounded-xl border transition-all duration-300 group"
-            style="background:#ffffff; border-color: rgba(148,120,220,0.12);">
-            <div class="relative flex-shrink-0">
-              <div class="w-14 h-10 rounded-lg overflow-hidden relative flex items-center justify-center" style="background: linear-gradient(135deg,#0ea5e9,#38bdf8);">
-                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&q=80" alt="Alex S." class="absolute inset-0 w-full h-full object-cover">
-              </div>
-              <div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-sky-500 flex items-center justify-center">
-                <svg class="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="min-w-0">
-              <div class="font-semibold text-slate-900 text-sm truncate">Alex S.</div>
-              <div class="text-slate-400 text-xs truncate">Social Media Manager</div>
-            </div>
-            <div class="ml-auto stars text-xs flex-shrink-0">★★★★★</div>
-          </button>
-
-          <!-- Client 4 -->
-          <button onclick="switchVideo('https://www.youtube.com/embed/e43zTe2HGSk?rel=0&modestbranding=1','PK','Paul K.','AirBNB Social Media · Oct 2025','linear-gradient(135deg,#f59e0b,#fbbf24)')"
-            class="video-selector-btn w-full text-left flex items-center gap-3 p-3 rounded-xl border transition-all duration-300 group"
-            style="background:#ffffff; border-color: rgba(148,120,220,0.12);">
-            <div class="relative flex-shrink-0">
-              <div class="w-14 h-10 rounded-lg overflow-hidden relative flex items-center justify-center" style="background: linear-gradient(135deg,#f59e0b,#fbbf24);">
-                <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=150&q=80" alt="Paul K." class="absolute inset-0 w-full h-full object-cover">
-              </div>
-              <div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-amber-500 flex items-center justify-center">
-                <svg class="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="min-w-0">
-              <div class="font-semibold text-slate-900 text-sm truncate">Paul K.</div>
-              <div class="text-slate-400 text-xs truncate">AirBNB Social Media</div>
-            </div>
-            <div class="ml-auto stars text-xs flex-shrink-0">★★★★★</div>
-          </button>
-
-          <!-- Client 5 -->
-          <button onclick="switchVideo('https://www.youtube.com/embed/ScMzIvxBSi4?rel=0&modestbranding=1','LN','Laura N.','Social Media Design · Oct 2025','linear-gradient(135deg,#10b981,#34d399)')"
-            class="video-selector-btn w-full text-left flex items-center gap-3 p-3 rounded-xl border transition-all duration-300 group"
-            style="background:#ffffff; border-color: rgba(148,120,220,0.12);">
-            <div class="relative flex-shrink-0">
-              <div class="w-14 h-10 rounded-lg overflow-hidden relative flex items-center justify-center" style="background: linear-gradient(135deg,#10b981,#34d399);">
-                <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=150&q=80" alt="Laura N." class="absolute inset-0 w-full h-full object-cover">
-              </div>
-              <div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center">
-                <svg class="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="min-w-0">
-              <div class="font-semibold text-slate-900 text-sm truncate">Laura N.</div>
-              <div class="text-slate-400 text-xs truncate">Social Media Design</div>
-            </div>
-            <div class="ml-auto stars text-xs flex-shrink-0">★★★★★</div>
-          </button>
-
-          <!-- Replace notice -->
-          <p class="text-slate-400 text-xs mt-2 flex items-start gap-1.5 leading-relaxed">
-            <svg class="w-3.5 h-3.5 mt-0.5 text-purple-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/></svg>
-            Replace each YouTube link with your actual client video testimonial URLs.
-          </p>
-        </div>
-
+      <div class="platform-card">
+        <div class="platform-icon"><i class="fab fa-reddit-alien"></i></div>
+        <span class="platform-name">Reddit</span>
       </div>
     </div>
 
-    <!-- Divider -->
-    <div class="section-divider mb-16"></div>
+    <div class="stack-label reveal">Workflow & Management Stack</div>
+    <div class="stack-grid reveal">
+      <div class="stack-pill"><i class="fas fa-sticky-note" style="font-size: 14px; color: var(--red);"></i> Notion
+      </div>
+      <div class="stack-pill"><i class="fas fa-tasks" style="font-size: 14px; color: var(--red);"></i> ClickUp</div>
+      <div class="stack-pill"><i class="fas fa-layer-group" style="font-size: 14px; color: var(--red);"></i> Publer
+      </div>
+      <div class="stack-pill"><i class="fab fa-buffer" style="font-size: 14px; color: var(--red);"></i> Buffer</div>
+      <div class="stack-pill"><i class="fab fa-meta" style="font-size: 14px; color: var(--red);"></i> Meta Suite</div>
+    </div>
+  </section>
 
-    <!-- ===== WRITTEN TESTIMONIALS ===== -->
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-left reveal">
+      <div class="section-label">Who I Am</div>
+      <h2 class="section-headline">Strategy-<em>First.</em><br>Data-Driven.<br>Results-Obsessed.</h2>
+      <p class="about-text">I'm a Social Media Strategist with <strong>5+ years of hands-on experience</strong> managing
+        and scaling accounts across Instagram, TikTok, Facebook, and LinkedIn — for brands, local businesses, creators,
+        and agencies.</p>
+      <p class="about-text">Most brands fail because they post without strategy. I build <strong>complete social media
+          systems</strong> that drive real growth, engagement, and leads — not vanity metrics.</p>
+      <p class="about-text">LUMS Marketing graduate. Fast responder (0–1 hrs). Top Rated on Upwork.</p>
+    </div>
+    <div class="about-right reveal">
+      <div class="about-image-wrap">
+        <div class="about-image-frame">
+          <img src="https://amjad-khan-portfolio.vercel.app/img/1.png" alt="Amjad Khan" class="about-img"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="about-img-placeholder" style="display:none;">
+            <div class="about-img-icon">AK</div>
+            <span>Amjad Khan</span>
+            <span style="color:var(--red-bright);margin-top:4px;">Social Media Strategist</span>
+          </div>
+        </div>
+        <div class="frame-corner tl"></div>
+        <div class="frame-corner tr"></div>
+        <div class="frame-corner bl"></div>
+        <div class="frame-corner br"></div>
+        <div class="about-badge">
+          <div class="badge-num">5★</div>
+          <div class="badge-label">Avg. Rating</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="services-header reveal">
+      <div>
+        <div class="section-label">What I Do</div>
+        <h2 class="section-headline">Core<br><em>Services</em></h2>
+      </div>
+      <p style="max-width:320px;font-size:14px;color:var(--text-muted);line-height:1.7;">Every service is built around
+        one goal: turning your social media into a growth engine that works 24/7.</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <span class="service-icon">◈</span>
+        <h3 class="service-title">Social Media Strategy</h3>
+        <p class="service-desc">Full strategy from awareness to lead generation. Competitor analysis, hashtag research,
+          brand voice & content direction.</p>
+        <div class="service-tags"><span class="tag">Instagram</span><span class="tag">TikTok</span><span
+            class="tag">Facebook</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <span class="service-icon">◎</span>
+        <h3 class="service-title">Content Creation</h3>
+        <p class="service-desc">Reels, carousels, static posts, caption writing & Canva Pro designs. Brand-consistent
+          visuals that convert viewers to followers.</p>
+        <div class="service-tags"><span class="tag">Reels</span><span class="tag">Canva Pro</span><span
+            class="tag">Carousels</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <span class="service-icon">◉</span>
+        <h3 class="service-title">Growth & Engagement</h3>
+        <p class="service-desc">Daily audience engagement, comment & DM management, community building. Organic growth
+          without paid ads.</p>
+        <div class="service-tags"><span class="tag">Organic</span><span class="tag">Community</span><span
+            class="tag">DMs</span></div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <span class="service-icon">⬡</span>
+        <h3 class="service-title">Lead Generation</h3>
+        <p class="service-desc">Content calendars that convert, funnel-focused social strategy. Turn followers into
+          paying customers at scale.</p>
+        <div class="service-tags"><span class="tag">Funnels</span><span class="tag">Ads</span><span
+            class="tag">Sales</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section id="results">
+    <div class="results-header reveal">
+      <div class="section-label" style="justify-content:center;">Proven Impact</div>
+      <h2 class="section-headline">Numbers That<br><em>Matter</em></h2>
+    </div>
+    <div class="results-grid reveal">
+      <div class="result-card featured">
+        <div class="result-num">93%</div>
+        <div class="result-label">Job Success</div>
+        <div class="result-desc">Top Rated on Upwork with 5-star feedback.</div>
+      </div>
+      <div class="result-card">
+        <div class="result-num">300%</div>
+        <div class="result-label">Follower Growth</div>
+        <div class="result-desc">Average increase in organic reach.</div>
+      </div>
+      <div class="result-card">
+        <div class="result-num">4.2x</div>
+        <div class="result-label">Meta Ads ROAS</div>
+        <div class="result-desc">Optimized return on ad spend.</div>
+      </div>
+      <div class="result-card">
+        <div class="result-num">2.4M</div>
+        <div class="result-label">Organic Views</div>
+        <div class="result-desc">Generated via viral content systems.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
     <div class="reveal">
-      <div class="flex items-center gap-2 mb-8">
-        <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background: linear-gradient(135deg, #ec4899, #f472b6);">
-          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>
-        </div>
-        <h3 class="font-heading font-bold text-slate-900 text-xl">Written Reviews</h3>
-      </div>
-
-      <div id="testimonials-container" class="relative">
-
-        <div class="testimonial-slide active">
-          <div class="rounded-2xl p-8 md:p-10" style="background: #ffffff; border: 1px solid rgba(148,120,220,0.1); box-shadow: 0 4px 24px rgba(124,58,237,0.05);">
-            <div class="stars text-2xl mb-6">★★★★★</div>
-            <p class="text-slate-600 text-lg leading-relaxed mb-8 italic">"Highly satisfied with Amjad's work! He delivered engaging social media content, managed our platforms efficiently, and provided smart strategies to boost audience engagement. Skilled in Facebook, Instagram, TikTok, and LinkedIn — highly recommended!"</p>
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-white" style="background: linear-gradient(135deg, #7c3aed, #a855f7);">JT</div>
-              <div>
-                <div class="text-slate-900 font-semibold">James T.</div>
-                <div class="text-slate-500 text-sm">Instagram Organic Growth Project · Jan 2026</div>
-              </div>
-              <div class="ml-auto glass px-3 py-1 rounded-full text-xs text-emerald-600 font-semibold">5.0 ★</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-slide">
-          <div class="rounded-2xl p-8 md:p-10" style="background: #ffffff; border: 1px solid rgba(148,120,220,0.1); box-shadow: 0 4px 24px rgba(124,58,237,0.05);">
-            <div class="stars text-2xl mb-6">★★★★★</div>
-            <p class="text-slate-600 text-lg leading-relaxed mb-8 italic">"Amjad Khan did an outstanding job working on my social media content. He consistently delivered real results, communicated clearly at every step, and always made himself available when needed. His dedication and professionalism are truly impressive."</p>
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-white" style="background: linear-gradient(135deg, #ec4899, #f472b6);">MR</div>
-              <div>
-                <div class="text-slate-900 font-semibold">Maria R.</div>
-                <div class="text-slate-500 text-sm">Social Media Marketing · Dec 2025</div>
-              </div>
-              <div class="ml-auto glass px-3 py-1 rounded-full text-xs text-emerald-600 font-semibold">5.0 ★</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-slide">
-          <div class="rounded-2xl p-8 md:p-10" style="background: #ffffff; border: 1px solid rgba(148,120,220,0.1); box-shadow: 0 4px 24px rgba(124,58,237,0.05);">
-            <div class="stars text-2xl mb-6">★★★★★</div>
-            <p class="text-slate-600 text-lg leading-relaxed mb-8 italic">"Amjad Khan is a skilled Social Media Manager who delivers high quality content, understands platform strategies, and communicates proactively. Highly recommended for anyone looking to grow their online presence."</p>
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-white" style="background: linear-gradient(135deg, #0ea5e9, #38bdf8);">AS</div>
-              <div>
-                <div class="text-slate-900 font-semibold">Alex S.</div>
-                <div class="text-slate-500 text-sm">Social Media Manager · Dec 2025</div>
-              </div>
-              <div class="ml-auto glass px-3 py-1 rounded-full text-xs text-emerald-600 font-semibold">5.0 ★</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-slide">
-          <div class="rounded-2xl p-8 md:p-10" style="background: #ffffff; border: 1px solid rgba(148,120,220,0.1); box-shadow: 0 4px 24px rgba(124,58,237,0.05);">
-            <div class="stars text-2xl mb-6">★★★★★</div>
-            <p class="text-slate-600 text-lg leading-relaxed mb-8 italic">"Amjad did a great job getting our social media platform up and running. Very professional, attentive to detail, and always delivered on time. Will definitely hire again for future projects!"</p>
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-white" style="background: linear-gradient(135deg, #f59e0b, #fbbf24);">PK</div>
-              <div>
-                <div class="text-slate-900 font-semibold">Paul K.</div>
-                <div class="text-slate-500 text-sm">AirBNB Social Media Launch · Oct 2025</div>
-              </div>
-              <div class="ml-auto glass px-3 py-1 rounded-full text-xs text-emerald-600 font-semibold">5.0 ★</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-slide">
-          <div class="rounded-2xl p-8 md:p-10" style="background: #ffffff; border: 1px solid rgba(148,120,220,0.1); box-shadow: 0 4px 24px rgba(124,58,237,0.05);">
-            <div class="stars text-2xl mb-6">★★★★★</div>
-            <p class="text-slate-600 text-lg leading-relaxed mb-8 italic">"Amjad handled the task efficiently with great attention to detail. His understanding of social media platforms and design trends is impressive. Will hire again without question!"</p>
-            <div class="flex items-center gap-4">
-              <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-white" style="background: linear-gradient(135deg, #10b981, #34d399);">LN</div>
-              <div>
-                <div class="text-slate-900 font-semibold">Laura N.</div>
-                <div class="text-slate-500 text-sm">Social Media Design Expert · Oct 2025</div>
-              </div>
-              <div class="ml-auto glass px-3 py-1 rounded-full text-xs text-emerald-600 font-semibold">5.0 ★</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Controls -->
-      <div class="flex items-center justify-center gap-4 mt-8">
-        <button id="prev-btn" class="btn-outline-glow w-12 h-12 rounded-full flex items-center justify-center text-slate-700" aria-label="Previous">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-        </button>
-        <div id="dots" class="flex gap-2"></div>
-        <button id="next-btn" class="btn-outline-glow w-12 h-12 rounded-full flex items-center justify-center text-slate-700" aria-label="Next">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-        </button>
-      </div>
+      <div class="section-label">Career Path</div>
+      <h2 class="section-headline">Experience<br><em>Timeline</em></h2>
     </div>
-
-  </div>
-</section>
-
-<!-- ===== SKILLS ===== -->
-<section id="skills" class="py-24 px-4 relative">
-  <div class="max-w-5xl mx-auto relative z-10">
-    <div class="text-center mb-16 reveal">
-      <p class="text-purple-600 font-semibold text-sm uppercase tracking-widest mb-3">Expertise</p>
-      <h2 class="font-heading font-black text-4xl lg:text-5xl text-slate-900">Skills & <span class="grad-text">Tools</span></h2>
-      <div class="section-line mx-auto"></div>
-    </div>
-
-    <div class="grid lg:grid-cols-2 gap-12">
-      <div class="reveal">
-        <h3 class="font-heading font-bold text-slate-900 text-xl mb-8">Platform Expertise</h3>
-        <div class="space-y-6">
-          <div>
-            <div class="flex justify-between mb-2">
-              <span class="text-slate-600 text-sm font-medium">Instagram Marketing</span>
-              <span class="text-purple-600 text-sm font-bold">98%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" data-width="98"></div></div>
-          </div>
-          <div>
-            <div class="flex justify-between mb-2">
-              <span class="text-slate-600 text-sm font-medium">TikTok Strategy</span>
-              <span class="text-purple-600 text-sm font-bold">92%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
-          </div>
-          <div>
-            <div class="flex justify-between mb-2">
-              <span class="text-slate-600 text-sm font-medium">Facebook Ads & Pages</span>
-              <span class="text-purple-600 text-sm font-bold">90%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-          </div>
-          <div>
-            <div class="flex justify-between mb-2">
-              <span class="text-slate-600 text-sm font-medium">LinkedIn Content</span>
-              <span class="text-purple-600 text-sm font-bold">85%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
-          </div>
-          <div>
-            <div class="flex justify-between mb-2">
-              <span class="text-slate-600 text-sm font-medium">YouTube Strategy</span>
-              <span class="text-purple-600 text-sm font-bold">80%</span>
-            </div>
-            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
-          </div>
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <div>
+          <div class="timeline-date">Jan 2025 – Present</div>
+          <div class="timeline-company">Marketix International</div>
+        </div>
+        <div>
+          <h3 class="timeline-role">Social Media Strategist</h3>
+          <p class="timeline-desc">Leading growth strategies for international brands, focusing on organic systems and
+            high-conversion content funnels.</p>
+          <div class="timeline-tags"><span class="tag">Strategy</span><span class="tag">ROI</span><span
+              class="tag">Growth</span></div>
         </div>
       </div>
-
-      <div class="reveal reveal-delay-2">
-        <h3 class="font-heading font-bold text-slate-900 text-xl mb-8">Tools & Capabilities</h3>
-        <div class="flex flex-wrap gap-3">
-          <span class="glass px-4 py-2 rounded-full text-sm text-purple-600 border border-purple-200">Canva Pro</span>
-          <span class="glass px-4 py-2 rounded-full text-sm text-pink-500 border border-pink-200">Content Strategy</span>
-          <span class="glass px-4 py-2 rounded-full text-sm text-blue-600 border border-blue-200">Meta Business Suite</span>
-          <span class="glass px-4 py-2 rounded-full text-sm text-emerald-600 border border-emerald-200">Analytics & Insights</span>
-          <span class="glass px-4 py-2 rounded-full text-sm text-amber-600 border border-amber-200">Hashtag Research</span>
-          <span class="glass px-4 py-2 rounded-full text-sm text-purple-600 border border-purple-200">Reels Editing</span>
-          <span class="glass px-4 py-2 rounded-full text-sm text-pink-500 border border-pink-200">Caption Copywriting</span>
-          <span class="glass px-4 py-2 rounded-full text-sm text-teal-600 border border-teal-200">Content Calendars</span>
-          <span class="glass px-4 py-2 rounded-full text-sm text-indigo-600 border border-indigo-200">Community Building</span>
-          <span class="glass px-4 py-2 rounded-full text-sm text-red-500 border border-red-200">A/B Testing</span>
-          <span class="glass px-4 py-2 rounded-full text-sm text-orange-500 border border-orange-200">Shopify</span>
-          <span class="glass px-4 py-2 rounded-full text-sm text-violet-600 border border-violet-200">SEO Basics</span>
+      <div class="timeline-item">
+        <div>
+          <div class="timeline-date">Feb 2023 – Jun 2025</div>
+          <div class="timeline-company">Avari Xpress Hotels</div>
         </div>
-
-        <!-- Certifications -->
-        <h3 class="font-heading font-bold text-slate-900 text-xl mt-10 mb-6">Certifications</h3>
-        <div class="space-y-3">
-          <!-- Cert 1 -->
-          <div class="glass rounded-xl p-4 flex items-center gap-4">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #7c3aed, #a855f7);">
-              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z"/></svg>
-            </div>
-            <div>
-              <div class="text-slate-900 text-sm font-semibold">SEO (Search Engine Optimization)</div>
-              <div class="text-slate-400 text-xs">DigiSkills · Feb 2024</div>
-            </div>
-          </div>
-
-          <!-- Cert 2 -->
-          <div class="glass rounded-xl p-4 flex items-center gap-4">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, #0ea5e9, #38bdf8);">
-              <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            </div>
-            <div>
-              <div class="text-slate-900 text-sm font-semibold">Social Media Marketing Strategy</div>
-              <div class="text-slate-400 text-xs">Coursera · Apr 2020</div>
-            </div>
-          </div>
+        <div>
+          <h3 class="timeline-role">Social Media Manager</h3>
+          <p class="timeline-desc">Managed the complete social media presence for Avari Xpress Hotels across Lahore,
+            Islamabad, Faisalabad & Gilgit. Elevated the brand's luxury image and drove direct bookings through
+            compelling content.</p>
+          <div class="timeline-tags"><span class="tag">Hospitality</span><span class="tag">Reels</span><span
+              class="tag">Brand Strategy</span><span class="tag">Campaigns</span></div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div>
+          <div class="timeline-date">May 2022 – Oct 2023</div>
+          <div class="timeline-company">Freelancing Hub</div>
+        </div>
+        <div>
+          <h3 class="timeline-role">Social Media Growth Strategist</h3>
+          <p class="timeline-desc">Results-driven strategist with a proven track record of growing brands through
+            strategic content, organic engagement, and platform-specific trends. Specialized in Instagram & TikTok
+            growth without paid ads.</p>
+          <div class="timeline-tags"><span class="tag">Organic Growth</span><span class="tag">Community</span><span
+              class="tag">TikTok</span></div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<div class="section-divider"></div>
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="portfolio-header reveal">
+      <div>
+        <div class="section-label">My Work</div>
+        <h2 class="section-headline">Featured<br><em>Projects</em></h2>
+      </div>
+      <a href="https://www.upwork.com/freelancers/~015113d2188a94384d" target="_blank" class="btn-ghost">View All on
+        Upwork →</a>
+    </div>
+    <div class="portfolio-grid reveal">
+      <!-- Project 1 -->
+      <div class="portfolio-card">
+        <div class="card-img-wrap">
+          <img src="https://i.pinimg.com/736x/ff/0a/49/ff0a49406d5bb9ea6f07b2f644750cad.jpg" alt="Hospitality Mockup"
+            class="card-img">
+        </div>
+        <a href="https://www.upwork.com/freelancers/~015113d2188a94384d" target="_blank" class="card-link"><i
+            class="fas fa-external-link-alt"></i></a>
+        <div class="card-content">
+          <span class="card-cat">Hospitality</span>
+          <h3 class="card-title">Avari Hotels Presence</h3>
+          <div class="card-impact"><i class="fas fa-chart-line"></i> 95% Booking Increase</div>
+        </div>
+      </div>
 
-<!-- ===== CTA ===== -->
-<section id="contact" class="py-28 px-4">
-  <div class="max-w-4xl mx-auto">
-    <div class="cta-bg rounded-3xl p-12 md:p-20 text-center reveal" style="border: none; background: linear-gradient(135deg, #4c1d95, #86198f);">
-      <div class="relative z-10">
-        <p class="text-purple-200 font-semibold text-sm uppercase tracking-[0.2em] mb-5">Ready to Grow?</p>
-        <h2 class="font-heading font-black text-4xl md:text-5xl lg:text-6xl text-white mb-7">
-          Let's Scale Your <span style="background: linear-gradient(135deg, #c084fc, #f9a8d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Brand</span>
-        </h2>
-        <p class="text-purple-100 text-lg mb-12 max-w-xl mx-auto leading-relaxed">
-          Stop posting without strategy. Let's build a social media system that drives real growth, engagement, and revenue for your business.
+      <!-- Project 2 -->
+      <div class="portfolio-card">
+        <div class="card-img-wrap">
+          <img src="https://i.pinimg.com/1200x/19/28/7c/19287c8799f8c0ce38103cfe7a240bea.jpg" alt="Instagram Mockup"
+            class="card-img">
+        </div>
+        <a href="https://www.upwork.com/freelancers/~015113d2188a94384d" target="_blank" class="card-link"><i
+            class="fas fa-external-link-alt"></i></a>
+        <div class="card-content">
+          <span class="card-cat">Instagram</span>
+          <h3 class="card-title">Global Growth Strategy</h3>
+          <div class="card-impact"><i class="fas fa-user-plus"></i> 300% Follower Growth</div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="portfolio-card">
+        <div class="card-img-wrap">
+          <img src="https://i.pinimg.com/736x/29/cf/3d/29cf3d41f716f6ca16ee137215b8986b.jpg" alt="Analytics Mockup"
+            class="card-img">
+        </div>
+        <a href="https://www.upwork.com/freelancers/~015113d2188a94384d" target="_blank" class="card-link"><i
+            class="fas fa-external-link-alt"></i></a>
+        <div class="card-content">
+          <span class="card-cat">Paid Ads</span>
+          <h3 class="card-title">E-commerce ROI Engine</h3>
+          <div class="card-impact"><i class="fas fa-coins"></i> 4.2x ROAS Optimized</div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="portfolio-card">
+        <div class="card-img-wrap">
+          <img src="https://i.pinimg.com/1200x/d6/5e/20/d65e20b4cd7b209fa92dd9b759f33775.jpg" alt="Video Mockup"
+            class="card-img">
+        </div>
+        <a href="https://www.upwork.com/freelancers/~015113d2188a94384d" target="_blank" class="card-link"><i
+            class="fas fa-external-link-alt"></i></a>
+        <div class="card-content">
+          <span class="card-cat">TikTok & Reels</span>
+          <h3 class="card-title">Viral Content Factory</h3>
+          <div class="card-impact"><i class="fas fa-play-circle"></i> 2.4M Organic Views</div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="portfolio-card">
+        <div class="card-img-wrap">
+          <img src="https://i.pinimg.com/736x/0d/1f/83/0d1f8393ca100dabc929f1c9e5863deb.jpg" alt="Design Mockup"
+            class="card-img">
+        </div>
+        <a href="https://www.upwork.com/freelancers/~015113d2188a94384d" target="_blank" class="card-link"><i
+            class="fas fa-external-link-alt"></i></a>
+        <div class="card-content">
+          <span class="card-cat">Design</span>
+          <h3 class="card-title">Visual Brand Identity</h3>
+          <div class="card-impact"><i class="fas fa-pen-nib"></i> Complete Brand Kit</div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="portfolio-card">
+        <div class="card-img-wrap">
+          <img src="https://i.pinimg.com/736x/bd/bb/13/bdbb13093881410781d66e2db960b95d.jpg" alt="Business Mockup"
+            class="card-img">
+        </div>
+        <a href="https://www.upwork.com/freelancers/~015113d2188a94384d" target="_blank" class="card-link"><i
+            class="fas fa-external-link-alt"></i></a>
+        <div class="card-content">
+          <span class="card-cat">E-commerce</span>
+          <h3 class="card-title">Shopify Social Scaling</h3>
+          <div class="card-impact"><i class="fas fa-shopping-cart"></i> Funnel Optimization</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="reveal">
+      <div class="section-label">Client Love</div>
+      <h2 class="section-headline">What Clients<br><em>Say</em></h2>
+    </div>
+    <div class="testimonials-grid reveal">
+      <div class="testimonial-card featured">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Highly satisfied with Amjad's work! He delivered engaging social media content,
+          managed our platforms efficiently, and provided smart strategies to boost audience engagement. Highly
+          recommended!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JT</div>
+          <div>
+            <div class="author-name">James T.</div>
+            <div class="author-role">Instagram Organic Growth · Jan 2026</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Amjad Khan did an outstanding job. He consistently delivered real results,
+          communicated clearly at every step, and always made himself available. His dedication is truly impressive."
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="https://www.upwork.com/freelancers/~015113d2188a94384d?referrer_url_path=%2Fnx%2Fsearch%2Ftalent%2Fdetails%2F~015113d2188a94384d%2Fprofile" target="_blank" style="background: white; color: #6d28d9; box-shadow: 0 4px 20px rgba(255,255,255,0.25);" class="px-9 py-4 rounded-full font-heading font-bold text-base inline-flex items-center gap-3 justify-center transition-all hover:-translate-y-1 hover:shadow-lg">
-            Book a Free 30 min Consultation 
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-          </a>
-          <a href="https://wa.me/+923409082093" target="_blank" style="border: 1px solid rgba(255,255,255,0.3); color: white;" class="px-9 py-4 rounded-full font-heading font-bold text-base inline-flex items-center gap-2 justify-center transition-all hover:-translate-y-1 hover:bg-white/10">
-            Send a Message
-          </a>
-        </div>
-
-        <!-- Trust signals -->
-        <div class="flex flex-wrap items-center justify-center gap-6 mt-14 text-purple-200 text-sm">
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            0–4 hr response
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            Top Rated · Upwork
-          </div>
-          <div class="flex items-center gap-2">
-            <svg class="w-4 h-4 text-emerald-300" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            93% Job Success
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-emerald-300 animate-pulse"></span>
-            Available Now
+        <div class="testimonial-author">
+          <div class="author-avatar">MR</div>
+          <div>
+            <div class="author-name">Maria R.</div>
+            <div class="author-role">Social Media Marketing · Dec 2025</div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="border-t border-slate-200 py-16 px-4" style="background: linear-gradient(to top, #f0ecff, #fafbff);">
-  <div class="max-w-6xl mx-auto">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-10">
-      <div class="text-center md:text-left">
-        <div class="font-heading font-bold text-2xl mb-2 tracking-tight">
-          <span class="grad-text">Amjad </span><span class="text-slate-800">Khan</span>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Amjad is a skilled Social Media Manager who delivers high quality content,
+          understands platform strategies, and communicates proactively. Highly recommended for anyone growing their
+          online presence."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AS</div>
+          <div>
+            <div class="author-name">Alex S.</div>
+            <div class="author-role">Social Media Manager · Dec 2025</div>
+          </div>
         </div>
-        <p class="text-slate-500 text-sm">Social Media Strategist & Growth Expert</p>
-        <p class="text-slate-400 text-xs mt-1.5 flex items-center gap-1.5 justify-center md:justify-start">
-          <svg class="w-3 h-3 text-purple-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
-          Gilgit, Pakistan · Available Worldwide
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Amjad did a great job getting our social media platform up and running. Very
+          professional, attentive to detail, and always delivered on time. Will definitely hire again!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">PK</div>
+          <div>
+            <div class="author-name">Paul K.</div>
+            <div class="author-role">AirBNB Social Media Launch · Oct 2025</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"Amjad handled the task efficiently with great attention to detail. His
+          understanding of social media platforms and design trends is impressive. Will hire again without question!"
         </p>
+        <div class="testimonial-author">
+          <div class="author-avatar">LN</div>
+          <div>
+            <div class="author-name">Laura N.</div>
+            <div class="author-role">Social Media Design Expert · Oct 2025</div>
+          </div>
+        </div>
       </div>
-
-      <div class="flex items-center gap-3">
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/amjad.khaann/?hl=en" target="_blank" class="footer-social w-10 h-10 rounded-xl flex items-center justify-center shadow-[0_2px_12px_rgba(214,36,159,0.25)]" style="background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);" aria-label="Instagram">
-          <svg class="w-[18px] h-[18px] text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        </a>
-        <!-- LinkedIn -->
-        <a href="https://www.facebook.com/KhyberZadaa" target="_blank" class="footer-social w-10 h-10 rounded-xl flex items-center justify-center shadow-[0_2px_12px_rgba(10,102,194,0.25)]" style="background: #0A66C2;" aria-label="LinkedIn">
-          <svg class="w-[18px] h-[18px] text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <!-- TikTok -->
-        <a href="https://www.tiktok.com/@amjadaly786?_r=1&_t=ZS-95Owbr9cs0f" target="_blank" class="footer-social w-10 h-10 rounded-xl flex items-center justify-center shadow-[0_2px_12px_rgba(0,0,0,0.15)]" style="background: #010101;" aria-label="TikTok">
-          <svg class="w-[18px] h-[18px] text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
-        </a>
-        <!-- Facebook -->
-        <a href="https://www.linkedin.com/in/amjad-khan-44a589262/" target="_blank" class="footer-social w-10 h-10 rounded-xl flex items-center justify-center shadow-[0_2px_12px_rgba(24,119,242,0.25)]" style="background: #1877F2;" aria-label="Facebook">
-          <svg class="w-[18px] h-[18px] text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        </a>
-        <!-- Upwork -->
-        <a href="https://www.upwork.com/freelancers/~015113d2188a94384d?referrer_url_path=%2Fnx%2Fsearch%2Ftalent%2Fdetails%2F~015113d2188a94384d%2Fprofile" target="_blank" class="footer-social w-10 h-10 rounded-xl flex items-center justify-center shadow-[0_2px_12px_rgba(20,168,0,0.25)]" style="background: #14a800;" aria-label="Upwork">
-          <svg class="w-[18px] h-[18px] text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg>
-        </a>
+      <div class="testimonial-card"
+        style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border-color:var(--red);background:rgba(193,18,31,0.05);">
+        <div
+          style="font-family:var(--font-display);font-size:52px;font-weight:900;color:var(--red-bright);line-height:1;margin-bottom:8px;">
+          5.0★</div>
+        <div
+          style="font-family:var(--font-mono);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--text-muted);margin-bottom:20px;">
+          Average Rating</div>
+        <div style="font-size:14px;color:var(--text-muted);margin-bottom:28px;">28+ jobs · 93% Job Success</div>
+        <a href="https://www.upwork.com/freelancers/~015113d2188a94384d" target="_blank" class="btn-primary"
+          style="font-size:10px;padding:12px 28px;">View Full Profile</a>
       </div>
     </div>
+  </section>
 
-    <div class="border-t border-slate-200 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 text-xs">
-      <p>© 2026 Amjad Khan. All rights reserved.</p>
-      <p>Crafted with strategy · <span class="text-purple-500">amjadkhan@email.com</span></p>
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="reveal">
+      <div class="section-label">Expertise</div>
+      <h2 class="section-headline">Skills &<br><em>Tools</em></h2>
     </div>
-  </div>
-</footer>
+    <div class="skills-layout reveal">
+      <div>
+        <h3
+          style="font-family:var(--font-mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--red-bright);margin-bottom:40px;">
+          Platform Expertise</h3>
+        <div class="skill-item">
+          <div class="skill-top"><span class="skill-name">Instagram Marketing</span><span class="skill-pct">98%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:98%;"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span class="skill-name">TikTok Strategy</span><span class="skill-pct">92%</span></div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:92%;"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span class="skill-name">Facebook Ads & Pages</span><span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:90%;"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span class="skill-name">LinkedIn Content</span><span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:85%;"></div>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-top"><span class="skill-name">YouTube Strategy</span><span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-fill" style="width:80%;"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3
+          style="font-family:var(--font-mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--red-bright);margin-bottom:40px;">
+          Tools & Capabilities</h3>
+        <div class="tools-cloud">
+          <span class="tool-pill">Social Media Manager</span><span class="tool-pill">Social Media Marketer</span>
+          <span class="tool-pill">Social Media Strategist</span><span class="tool-pill">Content Creation</span>
+          <span class="tool-pill">Video Editing</span><span class="tool-pill">SEO & Optimization</span>
+          <span class="tool-pill">Email Marketing</span><span class="tool-pill">WordPress Development</span>
+          <span class="tool-pill">Lead Generation</span><span class="tool-pill">Organic Growth</span>
+          <span class="tool-pill">Social Media Ads</span><span class="tool-pill">Canva Pro</span>
+          <span class="tool-pill">Meta Business Suite</span><span class="tool-pill">Analytics</span>
+        </div>
+        <div style="margin-top:48px;">
+          <h3
+            style="font-family:var(--font-mono);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--red-bright);margin-bottom:24px;">
+            Certifications</h3>
+          <div style="border-top:1px solid var(--border-dim);padding-top:20px;margin-bottom:16px;">
+            <div style="font-size:14px;font-weight:500;color:var(--white);margin-bottom:4px;">SEO (Search Engine
+              Optimization)</div>
+            <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:1px;color:var(--text-muted);">
+              DigiSkills · Feb 2024</div>
+          </div>
+          <div style="border-top:1px solid var(--border-dim);padding-top:20px;">
+            <div style="font-size:14px;font-weight:500;color:var(--white);margin-bottom:4px;">Social Media Marketing
+              Strategy</div>
+            <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:1px;color:var(--text-muted);">
+              Coursera · Apr 2020</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- ===== JAVASCRIPT ===== -->
-<script src="custom.js"></script>
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-bg"></div>
+    <div class="contact-inner reveal">
+      <div class="section-label" style="justify-content:center;">Ready to Grow?</div>
+      <h2 class="contact-headline">Let's Scale<br>Your <em>Brand</em></h2>
+      <p class="contact-sub">Stop posting without strategy. Let's build a social media system that drives real growth,
+        engagement, and revenue for your business.</p>
+      <div class="contact-actions">
+        <a href="https://www.upwork.com/freelancers/~015113d2188a94384d" target="_blank" class="btn-primary">Book Free
+          Consultation</a>
+        <a href="https://wa.me/+923409082093" target="_blank" class="btn-ghost">WhatsApp Me →</a>
+      </div>
+      <div class="contact-info-row">
+        <div class="contact-info-item">
+          <div class="contact-info-label">Location</div>
+          <div class="contact-info-val">Gilgit, Pakistan · Worldwide</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Response Time</div>
+          <div class="contact-info-val">0–1 Hours</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Availability</div>
+          <div class="contact-info-val"><span class="avail-dot"></span>Available Now</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">WhatsApp</div>
+          <div class="contact-info-val"><a href="https://wa.me/+923409082093">+92 340 9082093</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-copy">© 2026 Amjad Khan. All rights reserved. · Gilgit, Pakistan</div>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/amjad.khaann/" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@amjadaly786" target="_blank">TikTok</a>
+      <a href="https://www.linkedin.com/in/amjad-khan-44a589262/" target="_blank">LinkedIn</a>
+      <a href="https://www.facebook.com/KhyberZadaa" target="_blank">Facebook</a>
+      <a href="https://www.upwork.com/freelancers/~015113d2188a94384d" target="_blank">Upwork</a>
+    </div>
+  </footer>
+
+  <script src="custom.js"></script>
 </body>
+
 </html>
