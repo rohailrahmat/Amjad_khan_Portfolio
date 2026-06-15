@@ -566,7 +566,7 @@
     /* MARQUEE */
     .marquee-strip {
       background: var(--red);
-      padding: 15px 0;
+      padding: 24px 0;
       overflow: hidden;
     }
 
@@ -578,8 +578,8 @@
 
     .marquee-item {
       font-family: var(--font-mono);
-      font-size: 11px;
-      letter-spacing: 3px;
+      font-size: 28px;
+      letter-spacing: 2px;
       text-transform: uppercase;
       font-weight: 700;
       padding: 0 48px;
@@ -795,11 +795,12 @@
 
     .service-card {
       background: var(--dark-surface);
-      padding: 48px 36px;
+      padding: 60px 40px;
       position: relative;
       overflow: hidden;
       cursor: pointer;
-      transition: background 0.4s;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1;
     }
 
     .service-card::before {
@@ -808,7 +809,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      height: 3px;
+      height: 4px;
       background: var(--red-bright);
       transform: scaleX(0);
       transform-origin: left;
@@ -820,7 +821,10 @@
     }
 
     .service-card:hover {
-      background: rgba(193, 18, 31, 0.06);
+      background: rgba(193, 18, 31, 0.08);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      z-index: 2;
     }
 
     .service-num {
@@ -832,24 +836,25 @@
     }
 
     .service-icon {
-      font-size: 28px;
+      font-size: 36px;
       margin-bottom: 24px;
       display: block;
-      color: var(--red);
+      color: var(--red-bright);
+      text-shadow: 0 0 15px rgba(193,18,31,0.4);
     }
 
     .service-title {
       font-family: var(--font-display);
-      font-size: 22px;
+      font-size: 26px;
       font-weight: 700;
       margin-bottom: 16px;
       line-height: 1.2;
     }
 
     .service-desc {
-      font-size: 14px;
+      font-size: 15px;
       color: var(--text-muted);
-      line-height: 1.7;
+      line-height: 1.8;
       margin-bottom: 32px;
     }
 
